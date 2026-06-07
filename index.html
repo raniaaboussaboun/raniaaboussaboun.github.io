@@ -4,500 +4,389 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rania Aboussaboun - Portfolio</title>
+    <title>Rania Aboussaboun - Quant Portfolio</title>
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
-        /* Add the CSS here directly for easy testing */
-        /* General Hover Effect */
-        
         .dynamic-hover {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .dynamic-hover:hover {
             transform: scale(1.05);
-            /* Slightly scales up the element */
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            /* Adds shadow for effect */
         }
-        /* Footer Contact Details Hover Effect */
-        
+
         .footer-link.dynamic-hover {
             transition: transform 0.3s ease, color 0.3s ease;
         }
-        
+
         .footer-link.dynamic-hover:hover {
             transform: scale(1.05);
-            /* Slightly scales up the link */
             color: #ffeb3b;
-            /* Optional: Change color on hover */
         }
-        
+
         .contact-details p.dynamic-hover {
             transition: transform 0.3s ease, color 0.3s ease;
         }
-        
+
         .contact-details p.dynamic-hover:hover {
             transform: scale(1.05);
-            /* Slightly scales up the contact details */
             color: #ffeb3b;
-            /* Optional: Change color on hover */
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <nav>
-        <div class="logo">
-            <a href="#">Rania Aboussaboun</a>
+<!-- NAV -->
+<nav>
+    <div class="logo">
+        <a href="#">Rania Aboussaboun</a>
+    </div>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HEADER -->
+<header id="home">
+    <div class="intro">
+        <h1>Hello, I'm <span>Rania Aboussaboun</span></h1>
+
+        <p>
+            Quantitative Trading Analyst with live exposure to European power markets, focused on quantitative modeling and trading strategy development.
+        </p>
+
+        <p>
+            Outside of my core role, I actively trade FX, indices, and commodities while studying liquidity, macro news flow, and order flow dynamics.
+        </p>
+
+        <p>
+            I like building models that try to predict markets… and sometimes succeed before they change their mind.
+        </p>
+
+        <a href="#contact" class="btn">Contact Me</a>
+    </div>
+
+    <div class="contact-box">
+        <a href="mailto:aboussabounrania@gmail.com" class="contact-btn dynamic-hover">
+            <img src="images/gmail-mail-icon-for-web-design-free-png.webp">
+        </a>
+
+        <a href="https://www.linkedin.com/in/raniaaboussaboun/" class="contact-btn dynamic-hover">
+            <img src="images/174857.png">
+        </a>
+
+        <a href="https://www.kaggle.com/raniaaboussaoun" class="contact-btn dynamic-hover">
+            <img src="images/189_Kaggle_logo_logos-512.webp">
+        </a>
+
+        <a href="https://github.com/Ranyaaboussaboun" class="contact-btn dynamic-hover">
+            <img src="images/25231.png">
+        </a>
+    </div>
+</header>
+
+<!-- ABOUT -->
+
+<section id="about">
+    <h2>About Me</h2>
+
+    <p>
+        I am a Quantitative Trading Analyst working at the intersection of financial markets, algorithmic trading, and systematic strategy development, with live exposure to European power markets (Intraday, Day-Ahead, and Imbalance trading).
+    </p>
+
+    <p>
+        My work combines market microstructure analysis, macroeconomic research, statistical modeling, and machine learning to develop and refine trading signals across FX, equities, commodities, and energy markets such as electricity, gold, and oil.
+    </p>
+
+    <p>
+        I focus on building and evaluating systematic strategies using probability theory, stochastic processes, time-series analysis, Monte Carlo simulation, Markov chains, volatility models (GARCH/ARCH), and modern machine learning techniques including neural networks, gradient boosting (XGBoost/LightGBM), and reinforcement learning.
+    </p>
+
+    <p>
+        I am particularly interested in how liquidity, order flow, and volatility regimes interact with news and macroeconomic data, and how these inefficiencies can be transformed into robust, risk-adjusted trading strategies.
+    </p>
+
+    <p>
+        Outside of my 9–5 role, I actively study markets, develop trading models, and continuously analyze price behavior to improve my understanding of systematic trading and market dynamics.
+    </p>
+
+    <p>
+        I also value discipline and performance outside of finance — I regularly go to the gym and treat training as part of maintaining focus, consistency, and long-term execution mindset.
+    </p>
+</section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+    <h2>Professional Experience</h2>
+  
+    <div class="experience-container">
+  
+      <!-- BAYWA BACKUP TRADER -->
+      <div class="experience-item dynamic-hover">
+        <div class="experience-details">
+          <h3>Backup Power Trader</h3>
+          <p><strong>BayWa r.e. Energy Trading</strong> - Leipzig, Germany</p>
+          <p><em>Oct 2025 – Present</em></p>
+          <ul>
+            <li>Support 24/7 trading operations across German Intraday, Imbalance, and Capacity markets</li>
+            <li>Monitor and manage power plant portfolio exposure in real time</li>
+            <li>React to grid imbalances and market volatility during live trading sessions</li>
+            <li>Assist execution decisions under time-critical market conditions</li>
+          </ul>
         </div>
-        <ul>
-            <li><a href="#about-me">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Header Section -->
-    <header id="home">
-        <div class="intro">
-            <h1>Hello, I'm <span>Rania Aboussaboun</span></h1>
-            <p>Data Science Engineer Specialist In Trading Strategies | Financial Market Analyst| Day and Swing Trader</p>
-            <p>I am looking for job opportunities in the field of financial markets, and quantitative analysis. Particularly roles related to trading, financial market analysis, and the development of trading strategies</p>
-
-
-            <a href="#contact" class="btn">Contact Me</a>
+      </div>
+  
+      <!-- BAYWA QUANT ANALYST -->
+      <div class="experience-item dynamic-hover">
+        <div class="experience-details">
+          <h3>Quantitative Trading Analyst</h3>
+          <p><strong>BayWa r.e. Energy Trading</strong> - Leipzig, Germany</p>
+          <p><em>May 2025 – Present</em></p>
+          <ul>
+            <li>Develop intraday power market signals for Day-Ahead, Intraday, and Imbalance trading workflows</li>
+            <li>Analyze price movements, forecast updates, and grid conditions to generate trading insights</li>
+            <li>Translate quantitative signals into execution recommendations for traders</li>
+            <li>Monitor volatility regimes, liquidity conditions, and supply-demand imbalances</li>
+            <li>Collaborate with trading desk to optimize systematic decision-making processes</li>
+          </ul>
         </div>
-        <!-- Contact Info Box -->
-        <div class="contact-box">
-            <a href="mailto:aboussabounrania@gmail.com" class="contact-btn dynamic-hover" title="Email">
-                <img src="images/gmail-mail-icon-for-web-design-free-png.webp" alt="Email">
+      </div>
+  
+      <!-- CARBON INSIGHTS -->
+      <div class="experience-item dynamic-hover">
+        <div class="experience-details">
+          <h3>Data Science Engineer (Quantitative Trading)</h3>
+          <p><strong>Carbon Insights</strong></p>
+          <p><em>Nov 2024 – Apr 2025</em></p>
+          <ul>
+            <li>Designed and implemented systematic trading strategies for European carbon markets</li>
+            <li>Analyzed pricing dynamics, volatility regimes, and market microstructure behavior</li>
+            <li>Developed and backtested algorithmic trading strategies using statistical and ML methods</li>
+            <li>Built trading systems based on order flow, momentum, statistical arbitrage, and technical indicators</li>
+            <li>Developed news-driven short-horizon signal prototypes for predictive price movements</li>
+            <li>Deployed trading bot achieving strong risk-adjusted performance</li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- SFM -->
+      <div class="experience-item dynamic-hover">
+        <div class="experience-details">
+          <h3>Data Science Engineer Intern</h3>
+          <p><strong>SFM Technologies</strong></p>
+          <p><em>Jan 2024 – Nov 2024</em></p>
+          <ul>
+            <li>Developed incremental learning models for energy forecasting and disaggregation</li>
+            <li>Achieved high-performance predictive accuracy (up to 78% on renewable energy models)</li>
+            <li>Compared batch vs online learning approaches in production-like environments</li>
+            <li>Evaluated state-of-the-art machine learning methods for real-world energy systems</li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- PLANISWARE -->
+      <div class="experience-item dynamic-hover">
+        <div class="experience-details">
+          <h3>NLP & Data Science Intern</h3>
+          <p><strong>PLANISWARE</strong></p>
+          <p><em>Jun 2023 – Aug 2023</em></p>
+          <ul>
+            <li>Developed NLP models (BERT, XLNet) for log analysis and anomaly detection</li>
+            <li>Built active learning pipelines for automated error detection in system logs</li>
+            <li>Improved labeling efficiency and model robustness using semi-supervised methods</li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- AI RESEARCH -->
+      <div class="experience-item dynamic-hover">
+        <div class="experience-details">
+          <h3>AI Research Intern</h3>
+          <p><strong>Digital Research Center of Sfax</strong></p>
+          <p><em>Jan 2023 – May 2023</em></p>
+          <ul>
+            <li>Researched GAN and Pix2Pix models for image generation from thermal drone imagery</li>
+            <li>Worked on computer vision pipelines for environmental and aerial data analysis</li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- PIXEMANTIC -->
+      <div class="experience-item dynamic-hover">
+        <div class="experience-details">
+          <h3>Data Science Intern</h3>
+          <p><strong>Pixemantic</strong></p>
+          <p><em>Aug 2022 – Jun 2022</em></p>
+          <ul>
+            <li>Collected and processed medical datasets for AI-based consultation systems</li>
+            <li>Developed a medical chatbot for disease information retrieval and assistance</li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- BNA -->
+      <div class="experience-item dynamic-hover">
+        <div class="experience-details">
+          <h3>Data Science Intern</h3>
+          <p><strong>Banque Nationale Agricole (BNA)</strong></p>
+          <p><em>Jun 2022 – Aug 2022</em></p>
+          <ul>
+            <li>Cleaned and structured financial datasets using SQL</li>
+            <li>Developed Power BI dashboards for agricultural finance reporting</li>
+          </ul>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+<section id="skills">
+    <h2>Skills</h2>
+  
+    <div class="skills-container">
+  
+      <h3>Market & Macro Analysis</h3>
+      <div class="skill-category">
+        <div class="skill dynamic-hover"><span>Macroeconomic & Fundamental Analysis</span></div>
+        <div class="skill dynamic-hover"><span>Central Bank Policy & Interest Rate Interpretation</span></div>
+        <div class="skill dynamic-hover"><span>Economic Calendar & News Impact Analysis </span></div>
+        <div class="skill dynamic-hover"><span>Cross-Asset Correlation Analysis (FX, Equities, Commodities)</span></div>
+        <div class="skill dynamic-hover"><span>Liquidity Mapping & Order Flow Interpretation</span></div>
+        <div class="skill dynamic-hover"><span>Technical Analysis & Multi-Timeframe Structure</span></div>
+      </div>
+  
+     
+
+      <h3>Mathematics & Quantitative Methods</h3>
+      <div class="skill-category">
+        <div class="skill dynamic-hover"><span>Probability Theory & Stochastic Processes</span></div>
+        <div class="skill dynamic-hover"><span>Markov Chains for State-Based Market Modeling</span></div>
+        <div class="skill dynamic-hover"><span>Monte Carlo Simulations for Risk & Scenario Analysis</span></div>
+        <div class="skill dynamic-hover"><span>Statistical Inference & Hypothesis Testing</span></div>
+        <div class="skill dynamic-hover"><span>Time Series Analysis & Volatility Modeling</span></div>
+        <div class="skill dynamic-hover"><span>Regression Analysis (Linear & Multivariate)</span></div>
+      </div>
+      
+
+      <h3>Machine Learning & AI</h3>
+      <div class="skill-category">
+        <div class="skill dynamic-hover"><span>Neural Networks (NN)</span></div>
+        <div class="skill dynamic-hover"><span>XGBoost & LightGBM (Gradient Boosting Models)</span></div>
+        <div class="skill dynamic-hover"><span>Statistical & Time Series Modeling</span></div>
+        <div class="skill dynamic-hover"><span>Bayesian Statistics & Probabilistic Models</span></div>
+      </div>
+  
+       
+      <h3>Trading & Execution</h3>
+      <div class="skill-category">
+        <div class="skill dynamic-hover"><span>Price Action & Market Structure Trading</span></div>
+        <div class="skill dynamic-hover"><span>Order Book (DOM) & Liquidity Flow Analysis</span></div>
+        <div class="skill dynamic-hover"><span>Intraday, Swing & Session-Based Trading (London / NY)</span></div>
+        <div class="skill dynamic-hover"><span>News-Driven Volatility Trading</span></div>
+        <div class="skill dynamic-hover"><span>Algorithmic Trading & Strategy Development (MQL5)</span></div>
+        <div class="skill dynamic-hover"><span>Backtesting Strategies & Optimization</span></div>
+        <div class="skill dynamic-hover"><span>High-Frequency Trading (HFT) Concepts</span></div>
+        <div class="skill dynamic-hover"><span>Mean Reversion, Momentum & Trend-Following Strategies</span></div>
+        <div class="skill dynamic-hover"><span>Technical Indicators (RSI, MACD, Bollinger Bands)</span></div>
+      </div>
+  
+      <h3>Market Microstructure & Execution Quality</h3>
+      <div class="skill-category">
+        <div class="skill dynamic-hover"><span>Order Flow Analysis (Liquidity, Volume Imbalance, Heatmaps)</span></div>
+        <div class="skill dynamic-hover"><span>Slippage Modeling</span></div>
+        <div class="skill dynamic-hover"><span>Market Impact & Liquidity Dynamics</span></div>
+        <div class="skill dynamic-hover"><span>Market Making Strategies</span></div>
+        <div class="skill dynamic-hover"><span>Volatility Modeling (GARCH, ARCH Models)</span></div>
+      </div>
+
+      <h3>Risk & Portfolio Management</h3>
+      <div class="skill-category">
+        <div class="skill dynamic-hover"><span>Value at Risk (VaR)</span></div>
+        <div class="skill dynamic-hover"><span>Monte Carlo Risk Simulations</span></div>
+        <div class="skill dynamic-hover"><span>Portfolio Optimization</span></div>
+        <div class="skill dynamic-hover"><span>Hedging Strategies</span></div>
+        <div class="skill dynamic-hover"><span>Scenario Analysis & Stress Testing</span></div>
+        <div class="skill dynamic-hover"><span>Risk-Adjusted Performance Metrics (Sharpe / Sortino Ratio)</span></div>
+        <div class="skill dynamic-hover"><span>Position Sizing & Capital Preservation</span></div>
+      </div>
+  
+      <h3>Markets & Instruments</h3>
+      <div class="skill-category">
+        <div class="skill dynamic-hover"><span>Foreign Exchange (EUR/USD, GBP/USD, USD/JPY)</span></div>
+        <div class="skill dynamic-hover"><span>Equity Indices (NASDAQ )</span></div>
+        <div class="skill dynamic-hover"><span>Commodities ( XAU/USD, WTI)</span></div>
+        <div class="skill dynamic-hover"><span>German Power Markets (Day-Ahead, Intraday, Imbalance, mFRR, aFRR)</span></div>
+
+      </div>
+  
+      <h3>Data & Programming</h3>
+      <div class="skill-category">
+        <div class="skill dynamic-hover"><span>Python (Data Analysis & Quantitative Modeling)</span></div>
+        <div class="skill dynamic-hover"><span>MQL5</span></div>
+        <div class="skill dynamic-hover"><span>SQL (Market & Financial Data Querying)</span></div>
+        <div class="skill dynamic-hover"><span>R (Statistical Computing & Modeling)</span></div>
+        <div class="skill dynamic-hover"><span>c </span></div>
+
+        <div class="skill dynamic-hover"><span>API Integration & Data Pipelines</span></div>
+      </div>
+  
+    </div>
+  </section>
+
+  
+
+  
+
+  
+ 
+
+  
+   
+  
+
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <form action="https://formspree.io/f/mqazdjpr" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+
+        <div class="contact-info">
+            <a href="mailto:aboussabounrania@gmail.com" class="footer-link dynamic-hover">
+                <i class="fas fa-envelope"></i> Email
             </a>
-            <a href="https://www.linkedin.com/in/raniaaboussaboun/" class="contact-btn dynamic-hover" title="LinkedIn">
-                <img src="images/174857.png" alt="LinkedIn">
-            </a>
-            <a href="https://www.kaggle.com/raniaaboussaoun" class="contact-btn dynamic-hover" title="Kaggle">
-                <img src="images/189_Kaggle_logo_logos-512.webp" alt="Kaggle">
-            </a>
-            <a href="https://github.com/Ranyaaboussaboun" class="contact-btn dynamic-hover" title="GitHub">
-                <img src="images/25231.png" alt="GitHub">
-            </a>
-        </div>
-    </header>
 
-    <!-- About Me Section -->
-    <section id="about-me">
-        <div class="about-me-container">
-            <!-- Profile Picture -->
-            <div class="profile-picture">
-                <img src="assets/myimage.JPG" alt="Rania Aboussaboun">
-            </div>
-
-            
-        </div>
-    </section>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am a  Data Science Engineer with a strong interest in trading strategies, financial markets, I trade mainly forex, crypto and metal. I specialize in developing algorithmic trading strategies and using machine learninf to forecasting market trends. 
-        </p>
-        <p>
-            I am highly motivated by the ever-evolving nature of the financial world, and I love to keep up with the latest news, market dynamics, and insights, Day trading and uncovering hidden patterns in the market are activities I thoroughly enjoy, as they help refine my decision-making process and skills
-        </p>
-        <p>
-            My work and personal interests also extend to finance, where I enjoy analyzing the complexities of financial markets. I am always looking for opportunities to further develop my skills in market analysis, trading strategies, and financial decision-making
-        </p>
-        <p>
-            In addition to my professional interests, I am passionate about sports and enjoy staying active. I value self-development and constantly strive to improve myself both in my career and in my personal life
-        </p>
-        <p>
-            And I am open to relocation depending on the project, as I am eager to take on exciting opportunities that challenge me and allow me to grow professionally. 
-        </p>
-    </section>
-    
-
-    <!-- Professional Experience Section -->
-    <section id="experience">
-        <div class="experience-container">
-            <h2>Professional Experience</h2>
-
-            <!-- Data Science Engineer Intern at Carbon Insight -->
-
-            <div class="experience-item dynamic-hover">
-                <img src="images/1b95ef91f4ab475cb580a86b6e4fde0e.jpg" alt="Carbon Insight Logo" class="experience-logo">
-                <div class="experience-details">
-                    <h3>Data Science Engineer</h3>
-                    <p><strong>Dione Protocol</strong> - Newark, Delaware,US</p>
-                    <p><em>09/2024 – 03/2025</em></p>
-                    <ul>
-                        <li> devoloping trading strategies with machine model for carbon EU market</li>
-                        <li>Developed and backtested algorithmic trading strategies, including statistical arbitrage and momentum trading</li>
-                        <li>Studied algorithmic and quant trading</li>
-                        <li>Studied trading strategies and built trading bot achieving 61% accuarcy with high return </li>
-                        <li>Studied and built predictive time- series models for financial market </li>
-                        <li>used sentiment analysis models to predict the close price direction</li>
-                        
-
-                        
-                        
-                    </ul>
-                </div>
-            </div>
-            <div class="experience-item dynamic-hover">
-                <img src="images/1b95ef91f4ab475cb580a86b6e4fde0e.jpg" alt="Carbon Insight Logo" class="experience-logo">
-                <div class="experience-details">
-                    <h3>Data Science Engineer Intern</h3>
-                    <p><strong>Dione Protocol</strong> - Newark, Delaware,US</p>
-                    <p><em>03/2024 – 08/2024</em></p>
-                    <ul>
-                        <li>collected starlink data and created a model to predict the use of starlink acheiving 0.91 accuracy</li>
-                        <li>Collected Data and Developed an algorithm to predict renewable energy (Solar and wind) in real time</li>
-                        <li>Used ML algorithms for Weather forecasting</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Data Science Engineer Intern at SFM Technologies -->
-            <div class="experience-item dynamic-hover">
-                <img src="images/Fichier-2-1.png" alt="SFM Technologies Logo" class="experience-logo">
-                <div class="experience-details">
-                    <h3>Data Science Engineer Intern - End of Studies Internship</h3>
-                    <p><strong>SFM Technologies</strong> - Tunis, Tunisia</p>
-                    <p><em>02/2024 – 06/2024</em></p>
-                    <ul>
-                        <li>Evaluated state-of-the-art Incremental Learning algorithms</li>
-                        <li>Developed a new incremental learning approach for energy disaggregation with 1% error</li>
-                        <li>Conducted a comparative analysis of incremental learning and batch models</li>
-                        <li>Compared between existing incremental learning algorithms and incremental learning algorithm developed</li>
-
-                    </ul>
-                </div>
-            </div>
-
-            <!-- AI Engineer Intern at PLANISWARE -->
-            <div class="experience-item dynamic-hover">
-                <img src="images/Untitled-300-200-px-47-6284276962d8e.png" alt="PLANISWARE Logo" class="experience-logo">
-                <div class="experience-details">
-                    <h3>Data Science Engineer Intern</h3>
-                    <p><strong>PLANISWARE</strong> - Tunis, Tunisia</p>
-                    <p><em>06/2023 – 08/2023</em></p>
-                    <ul>
-                        <li>Analyzed and cleaned log files data</li>
-                        <li>Implemented Active Learning algorithms, models like BERT and XLNet to annotate and extract errors</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Data Science Engineer Intern at Pixemantic -->
-            <div class="experience-item dynamic-hover">
-                <img src="images/Pixemantic-logo-removebg-preview_urpu8e.png" alt="Pixemantic Logo" class="experience-logo">
-                <div class="experience-details">
-                    <h3>Data Science Engineer Intern</h3>
-                    <p><strong>Pixemantic</strong> - Tunis, Tunisia</p>
-                    <p><em>08/2022 – 06/2022</em></p>
-                    <ul>
-                        <li>collected and Cleaned medical data</li>
-                        <li>Developed a simple chatbot for disease consultation</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Data Science Engineer Intern at Banque Nationale Agricole (BNA) -->
-            <div class="experience-item dynamic-hover">
-                <img src="images/bna-identite.png" alt="Banque Nationale Agricole Logo" class="experience-logo">
-                <div class="experience-details">
-                    <h3>Data Science Engineer Intern</h3>
-                    <p><strong>Banque Nationale Agricole (BNA)</strong> - Tunis, Tunisia</p>
-                    <p><em>06/2022 – 08/2022</em></p>
-                    <ul>
-                        <li>Cleaned bank data using Power BI and SQL</li>
-                        <li>Built dashboards of agricultural engagement using PowerBI</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education">
-        <h2>Education</h2>
-
-
-        <div class="education-item dynamic-hover">
-            <img src="images/ensit.png" alt="School 1 Logo" class="education-logo">
-            <div class="education-details">
-                <h3>Research Master’s Degree in Data Science</h3>
-                <p>National School of Engineering of Tunis</p>
-                <p>09/2024 – present</p>
-                <p>Tunis, Tunisia</p>
-            </div>
-        </div>
-
-        <div class="education-item dynamic-hover">
-            <img src="images/logo.png" alt="School 2 Logo" class="education-logo">
-            <div class="education-details">
-                <h3>Data Engineering and Decisional Systems</h3>
-                <p>National School of Electronics and Telecommunications of Sfax</p>
-                <p>09/2021 – 06/2024</p>
-                <p>Sfax, Tunisia</p>
-            </div>
-        </div>
-
-        <div class="education-item dynamic-hover">
-            <img src="images/logo (1).png" alt="School 3 Logo" class="education-logo">
-            <div class="education-details">
-                <h3>Mathematics and Physics Pre-Engineering Studies</h3>
-                <p>Preparatory Institute for Engineering Nabeul</p>
-                <p>09/2019 – 06/2021</p>
-                <p>Nabeul, Tunisia</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <!-- Programming Languages -->
-            <h3>Programming Languages</h3>
-            <div class="skill-category">
-                <div class="skill dynamic-hover">
-                    <img src="images/5968350.png" alt="Python">
-                    <span>Python</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <img src="images/images.jpg" alt="R">
-                    <span>R</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <img src="images/6132220.png" alt="Scala">
-                    <span>Scala</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <img src="images/4299956.png" alt="SQL">
-                    <span>SQL</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <img src="images/java-logo.png" alt="Java">
-                    <span>Java</span>
-                </div>
-            </div>
-    
-            <!-- Machine Learning Skills -->
-            <h3>Machine Learning Skills</h3>
-            <div class="skill-category">
-                <div class="skill dynamic-hover">
-                    <span>Supervised Learning</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Unsupervised Learning</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Feature Engineering</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Time Series Forecasting</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Statistical Analysis and Testing</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Data Cleaning and Preparation (Pandas)</span>
-                </div>
-            </div>
-    
-            <!-- Financial Market Analysis & Algorithmic Trading -->
-            <h3>Financial Market Analysis & Algorithmic Trading</h3>
-            <div class="skill-category">
-                <div class="skill dynamic-hover">
-                    <span>Market Microstructure</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Liquidity Analysis</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Quantitative Modeling</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Backtesting Strategies</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Statistical Arbitrage</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>High-Frequency Trading (HFT)</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Slippage Modeling</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Algorithmic Trading</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Risk Management</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Portfolio Optimization</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Hedging Strategies</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Price Action Trading</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Market Sentiment Analysis</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Volatility Modeling</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Derivative Pricing</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Options Trading Strategies</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Execution Algorithms</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Monte Carlo Simulation</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Technical Analysis (TA)</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Fundamental Analysis</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Factor Models</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Co-Integration Techniques</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <span>Risk-adjusted Performance Metrics</span>
-                </div>
-            </div>
-    
-            <!-- Data Visualization Tools -->
-            <h3>Data Visualization Tools</h3>
-            <div class="skill-category">
-                <div class="skill dynamic-hover">
-                    <img src="images/Power-BI-Logo-2013.png" alt="PowerBI">
-                    <span>PowerBI</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <img src="images/microsoft_office_excel_logo_icon_145720.webp" alt="Microsoft Excel">
-                    <span>Microsoft Excel</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <img src="images/icon-tableau.png" alt="Tableau">
-                    <span>Tableau</span>
-                </div>
-            </div>
-    
-            <!-- Big Data Platforms -->
-            <h3>Big Data Platforms</h3>
-            <div class="skill-category">
-                <div class="skill dynamic-hover">
-                    <img src="images/hadoop-logo.png" alt="Hadoop">
-                    <span>Hadoop</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <img src="images/images (2).png" alt="Spark">
-                    <span>Spark</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <img src="images/png-transparent-mysql-logo-mysql-database-web-development-computer-software-dolphin-marine-mammal-animals-text-thumbnail.png" alt="MySQL">
-                    <span>MySQL</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <img src="images/1.png" alt="Talend">
-                    <span>Talend</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <img src="images/png-transparent-mongodb-plain-wordmark-logo-icon-thumbnail.png" alt="MongoDB">
-                    <span>MongoDB</span>
-                </div>
-            </div>
-    
-            <!-- Operating Systems -->
-            <h3>Operating Systems</h3>
-            <div class="skill-category">
-                <div class="skill dynamic-hover">
-                    <img src="images/6f050e39-windows_10_logoblue.svg-copy_windows.jpg" alt="Windows">
-                    <span>Windows</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <img src="images/da9gl56-1be1a52f-05e8-43b2-97c2-cfa2c61c34b4.png" alt="macOS">
-                    <span>macOS</span>
-                </div>
-                <div class="skill dynamic-hover">
-                    <img src="images/linux-icon-2048x2048-sy06t4un.png" alt="Linux">
-                    <span>Linux</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects-container">
-            <p>Check out my projects on GitHub:</p>
-            <a href="https://github.com/raniaaboussaboun" target="_blank">
-                <button class="github-button">GitHub</button>
+            <a href="https://www.linkedin.com/in/raniaaboussaboun/" class="footer-link dynamic-hover">
+                <i class="fab fa-linkedin"></i> LinkedIn
             </a>
         </div>
-    </section>
-    
 
-
-
-
-         
-
-
-
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>If you’d like to work with me, feel free to reach out.</p>
-        <form action="https://formspree.io/f/mqazdjpr" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </section>
-
-    <script src="js/script.js"></script>
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-container">
-            <div class="contact-info">
-                <a href="mailto:aboussabounrania@gmail.com" class="footer-link dynamic-hover">
-                    <i class="fas fa-envelope"></i> Gmail
-                </a>
-                <a href="https://www.linkedin.com/in/raniaaboussaboun/" class="footer-link dynamic-hover">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-               
-            </div>
-            <div class="contact-details">
-                <p class="dynamic-hover"><i class="fas fa-home"></i>Agadir, morocco</p>
-                <p class="dynamic-hover"><i class="fas fa-phone"></i> (+216)24552282</p>
-            </div>
+        <div class="contact-details">
+            <p class="dynamic-hover"><i class="fas fa-home"></i> Leipzig, Germany</p>
+            <p class="dynamic-hover"><i class="fas fa-phone"></i> Available on request</p>
         </div>
-    </footer>
+
+    </div>
+</footer>
 
 </body>
-
 </html>
