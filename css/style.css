@@ -583,27 +583,36 @@ ul li {
 
 .cert-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-    align-items: start;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
 }
 
 .cert-card {
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border: 1px solid #ddd;
     background: white;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
 }
 
 .cert-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .cert-card img {
     width: 100%;
-    height: 140px;
+    height: 110px;
     object-fit: cover;
     display: block;
+}
+
+.cert-card .cert-label {
+    padding: 8px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #666;
+    text-align: center;
 }
