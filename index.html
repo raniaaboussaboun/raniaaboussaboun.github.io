@@ -40,13 +40,7 @@
         }
     </style>
 </head>
-<script>
-    document.querySelectorAll('.cert-card').forEach(card => {
-        card.addEventListener('click', () => {
-            card.classList.toggle('expanded');
-        });
-    });
-</script>
+
 <body>
 
 <!-- NAV -->
@@ -404,6 +398,12 @@
 
     </div>
 </footer>
-
+<script>
+    document.querySelectorAll('.cert-card').forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('expanded');
+        });
+    });
+</script>
 </body>
 </html>
