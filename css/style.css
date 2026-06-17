@@ -579,15 +579,6 @@ ul li {
 
 
 
-
-
-.cert-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 16px;
-    margin-top: 24px;
-}
-
 .cert-card {
     border-radius: 10px;
     overflow: hidden;
@@ -607,12 +598,40 @@ ul li {
     height: 110px;
     object-fit: cover;
     display: block;
+    transition: height 0.3s ease;
 }
 
-.cert-card .cert-label {
-    padding: 8px 10px;
-    font-size: 12px;
-    font-weight: bold;
-    color: #666;
-    text-align: center;
+/* Lightbox overlay */
+.cert-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.cert-overlay.active {
+    display: flex;
+}
+
+.cert-overlay img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    object-fit: contain;
+}
+
+.cert-overlay .close-btn {
+    position: fixed;
+    top: 20px;
+    right: 28px;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    line-height: 1;
+    background: none;
+    border: none;
 }

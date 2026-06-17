@@ -40,7 +40,29 @@
         }
     </style>
 </head>
+  <!-- Cert Lightbox -->
+<div class="cert-overlay" id="certOverlay">
+    <button class="close-btn" id="certClose">&times;</button>
+    <img id="certFullImg" src="" alt="Certificate">
+</div>
+<script>
+    const overlay = document.getElementById('certOverlay');
+    const fullImg = document.getElementById('certFullImg');
+    const closeBtn = document.getElementById('certClose');
 
+    document.querySelectorAll('.cert-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const src = card.querySelector('img').src;
+            fullImg.src = src;
+            overlay.classList.add('active');
+        });
+    });
+
+    closeBtn.addEventListener('click', () => overlay.classList.remove('active'));
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) overlay.classList.remove('active');
+    });
+</script>
 <body>
 
 <!-- NAV -->
@@ -325,6 +347,7 @@
   
     </div>
   </section>
+
 
   <!-- CERTIFICATIONS -->
 <section id="cert-gallery">
