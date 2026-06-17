@@ -257,8 +257,6 @@ section h2 {
 
 
 
-
-
 /* ── SKILLS SECTION ── */
 .skills-container {
     max-width: 900px;
@@ -325,83 +323,6 @@ section h2 {
 .tag.coral  { background: #FAECE7; color: #712B13; border-color: #F0997B; }
 .tag.amber  { background: #FAEEDA; color: #633806; border-color: #EF9F27; }
 .tag.green  { background: #EAF3DE; color: #27500A; border-color: #97C459; }
-
-.projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px; 
-}
-
-.project {
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    padding: 15px; /* Added padding to give content some space inside */
-    text-align: center;
-    flex: 1 1 calc(33.333% - 40px); /* Allows 3 items per row with gaps */
-    max-width: 300px; /* Max width to avoid too large cards */
-    box-sizing: border-box; /* Ensures padding is included in the width */
-}
-
-.project img {
-    width: 100%; /* Ensure the image takes full width of the container */
-    height: auto; /* Keep aspect ratio */
-    border-radius: 5px 5px 0 0;
-}
-
-.project h3 {
-    margin: 15px 0;
-    font-size: 1.2em; /* Adjust font size to balance with the container */
-}
-
-.project p {
-    padding: 0 15px;
-    font-size: 0.95em; /* Slightly smaller text for readability */
-}
-
-.project .btn {
-    background-color: #0073b1; /* LinkedIn blue */
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    margin-right: 10px; /* Space between buttons */
-}
-
-.project .btn:hover {
-    background-color: #005582; /* Darker LinkedIn blue */
-}
-
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-form input, form textarea {
-    width: 100%;
-    max-width: 500px;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid white;
-    border-radius: 5px;
-}
-
-form button {
-    background-color: #02034b;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #878585;
-}
 /* Footer Section */
 footer {
     background: url('image.jpg') no-repeat center center/cover;
