@@ -258,6 +258,7 @@ section h2 {
 
 
 /* ── SKILLS SECTION ── */
+/* ── SKILLS SECTION ── */
 .skills-container {
     max-width: 900px;
     margin: 0 auto;
@@ -302,20 +303,6 @@ section h2 {
     flex-wrap: wrap;
     gap: 8px;
 }
-.skill-category {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    padding: 12px 0;
-    margin-bottom: 24px;
-    border-bottom: 1px solid rgba(14, 5, 69, 0.1);
-}
-.skill-group > h3 {
-    margin-top: 28px;
-    margin-bottom: 12px;
-    color: #0e0545;
-    font-size: 1.1rem;
-}
 
 .tag {
     display: inline-flex;
@@ -334,10 +321,16 @@ section h2 {
 .tag.purple { background: #EEEDFE; color: #3C3489; border-color: #AFA9EC; }
 .tag.teal   { background: #E1F5EE; color: #085041; border-color: #5DCAA5; }
 .tag.blue   { background: #E6F1FB; color: #0C447C; border-color: #85B7EB; }
-.tag.coral  { background: #FAECE7; color: #712B13; border-color: #F0997B; }
-.tag.amber  { background: #FAEEDA; color: #7b0365; border-color: #EF9F27; }
-.tag.green  { background: #EAF3DE; color: #2a530d; border-color: #97C459; }
+.tag.coral  { background: #FAECE7; color: #712B13; border-color: #cb623f; }
+.tag.amber  { background: #FAEEDA; color: #633806; border-color: #ae0ba6; }
+.tag.green  { background: #EAF3DE; color: #27500A; border-color: #97C459; }
 /* Footer Section */
+
+
+
+
+
+
 footer {
     background: url('image.jpg') no-repeat center center/cover;
     color: #f4f4f4;
