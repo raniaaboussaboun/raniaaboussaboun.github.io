@@ -575,3 +575,25 @@ ul li {
     transform: scale(1.05); /* Slightly scales up the contact details */
     color: #ffeb3b; /* Optional: Change color on hover */
 }
+.cert-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cert-card {
+    width: 250px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    background: white;
+}
+
+.cert-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
