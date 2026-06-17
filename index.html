@@ -171,11 +171,12 @@
 <body>
 
 <!-- NAV -->
-<nav>
+<nav class="navbar">
     <div class="logo">
         <a href="#">Rania Aboussaboun</a>
     </div>
-    <ul>
+
+    <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -209,17 +210,66 @@
 
 <!-- ABOUT -->
 <section id="about">
-    <h2>About Me</h2>
-    <p>I am a Quantitative Trading Analyst working in European short term energy markets.</p>
-    <p>My role combines fundamental market analysis with short-term trading, where I monitor market developments, assess key drivers, and support trading decisions in a fast-paced shift-based environment.</p>
-    <p>Outside of my 9–5, I have a strong interest in financial markets, macroeconomics, and quantitative trading. I actively research FX markets, study market behavior, and develop and test my own systematic trading strategies and models.</p>
-    <p>I continuously analyze price action, macros, and market dynamics to deepen my understanding of trading decision-making.</p>
-    <p>I also value discipline and performance outside of finance—I regularly train in the gym and view physical fitness as an important part of maintaining focus, consistency, and a long-term execution mindset.</p>
+    
+
+    <div class="about-container">
+
+        <div class="about-highlight">
+            <h2 class="section-title">About Me</h2>
+            
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-card">
+                <h4>📊 Role</h4>
+                <p>
+                    I work as a Quantitative Trading Analyst in European short-term energy markets, combining
+                    fundamental market analysis with fast-paced trading execution.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <h4>⚡ Focus</h4>
+                <p>
+                    I monitor market developments, assess key drivers, and support trading decisions in
+                    time-sensitive environments where precision and speed matter.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <h4>🧠 Research</h4>
+                <p>
+                    Outside of my 9-5, I actively study macroeconomics, FX markets, and develop systematic trading
+                    strategies using quantitative models and data-driven insights.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <h4>📈 Mindset</h4>
+                <p>
+                    I focus heavily on price action, market structure, and behavioral dynamics to improve decision-making
+                    in trading systems.
+                </p>
+            </div>
+
+            <div class="about-card full">
+                <h4>🏋️ Discipline</h4>
+                <p>
+                    I value discipline beyond finance. Regular training and physical performance are part of my routine,
+                    reinforcing consistency, resilience, and long-term execution mindset.
+                </p>
+            </div>
+
+        </div>
+    </div>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience">
-    <h2>Professional Experience</h2>
+  
+       <h2 class="section-title">Professional Experience</h2>
+
     <div class="experience-container">
 
         <!-- BAYWA BACKUP TRADER — no cert -->
@@ -323,7 +373,7 @@
                 
                 </div>
             </div>
-        </div>
+        
 
         <!-- PIXEMANTIC — with cert -->
         <div class="experience-item dynamic-hover">
@@ -368,7 +418,7 @@
 
 <!-- EDUCATION -->
 <section id="education">
-    <h2>Education</h2>
+<h2 class="section-title">Education</h2>
     <div class="education-container">
 
         <div class="education-item dynamic-hover">
@@ -400,18 +450,18 @@
 
 
 <!-- SKILLS -->
-<!-- SKILLS -->
+
 <section id="skills">
-    <h2>Skills</h2>
+   <h2 class="section-title">Skills</h2>
+    
 
     <div class="skills-container">
+
+        <!-- Market & Macro -->
         <div class="skill-group">
-
             <div class="skill-group-header">
-                <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-            
-
-            <h3>Market & Macro Analysis</h3>
+                <div class="skill-icon"><i class="fas fa-globe"></i></div>
+                <h3>Market & Macro Analysis</h3>
             </div>
             <div class="skill-tags">
                 <span class="tag purple">Macroeconomic & Fundamental Analysis</span>
@@ -421,12 +471,14 @@
                 <span class="tag purple">Liquidity Mapping & Order Flow Interpretation</span>
                 <span class="tag purple">Technical Analysis & Multi-Timeframe Structure</span>
             </div>
-             </div>
-             
-         <div class="skill-group-header">
-                <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-            
-            <h3>Mathematics & Quantitative Methods</h3>  </div>
+        </div>
+
+        <!-- Math -->
+        <div class="skill-group">
+            <div class="skill-group-header">
+                <div class="skill-icon"><i class="fas fa-square-root-alt"></i></div>
+                <h3>Mathematics & Quantitative Methods</h3>
+            </div>
             <div class="skill-tags">
                 <span class="tag teal">Probability Theory & Stochastic Processes</span>
                 <span class="tag teal">Markov Chains for State-Based Market Modeling</span>
@@ -435,22 +487,28 @@
                 <span class="tag teal">Time Series Analysis & Volatility Modeling</span>
                 <span class="tag teal">Regression Analysis (Linear & Multivariate)</span>
             </div>
-<div class="skill-group-header">
-                <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-            
-            <h3>Machine Learning</h3> </div>
+        </div>
+
+        <!-- Machine Learning -->
+        <div class="skill-group">
+            <div class="skill-group-header">
+                <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                <h3>Machine Learning</h3>
+            </div>
             <div class="skill-tags">
                 <span class="tag blue">Neural Networks (NN)</span>
                 <span class="tag blue">XGBoost & LightGBM (Gradient Boosting Models)</span>
                 <span class="tag blue">Feature Engineering for Financial Time Series</span>
                 <span class="tag blue">Bayesian Statistics & Probabilistic Models</span>
             </div>
+        </div>
 
-
+        <!-- Trading -->
+        <div class="skill-group">
             <div class="skill-group-header">
-                <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-            
-            <h3>Trading & Execution</h3> </div>
+                <div class="skill-icon"><i class="fas fa-bolt"></i></div>
+                <h3>Trading & Execution</h3>
+            </div>
             <div class="skill-tags">
                 <span class="tag coral">Price Action & Market Structure Trading</span>
                 <span class="tag coral">Order Book (DOM) & Liquidity Flow Analysis</span>
@@ -462,10 +520,14 @@
                 <span class="tag coral">Mean Reversion, Momentum & Trend-Following Strategies</span>
                 <span class="tag coral">Technical Indicators (RSI, MACD, Bollinger Bands)</span>
             </div>
-<div class="skill-group-header">
-                <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-            
-            <h3>Market Microstructure & Execution Quality</h3> </div>
+        </div>
+
+        <!-- Microstructure -->
+        <div class="skill-group">
+            <div class="skill-group-header">
+                <div class="skill-icon"><i class="fas fa-wave-square"></i></div>
+                <h3>Market Microstructure & Execution Quality</h3>
+            </div>
             <div class="skill-tags">
                 <span class="tag purple">Order Flow Analysis (Liquidity, Volume Imbalance, Heatmaps)</span>
                 <span class="tag purple">DOM Analysis</span>
@@ -473,10 +535,14 @@
                 <span class="tag purple">Market Impact & Liquidity Dynamics</span>
                 <span class="tag purple">Volatility Modeling</span>
             </div>
-<div class="skill-group-header">
-                <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-            
-            <h3>Risk & Portfolio Management</h3> </div>
+        </div>
+
+        <!-- Risk -->
+        <div class="skill-group">
+            <div class="skill-group-header">
+                <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Risk & Portfolio Management</h3>
+            </div>
             <div class="skill-tags">
                 <span class="tag amber">Value at Risk (VaR)</span>
                 <span class="tag amber">Monte Carlo Risk Simulations</span>
@@ -485,20 +551,28 @@
                 <span class="tag amber">Risk-Adjusted Performance Metrics (Sharpe / Sortino Ratio)</span>
                 <span class="tag amber">Position Sizing & Capital Preservation</span>
             </div>
-<div class="skill-group-header">
-                <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-            
-            <h3>Markets & Instruments</h3> </div>
+        </div>
+
+        <!-- Markets -->
+        <div class="skill-group">
+            <div class="skill-group-header">
+                <div class="skill-icon"><i class="fas fa-coins"></i></div>
+                <h3>Markets & Instruments</h3>
+            </div>
             <div class="skill-tags">
                 <span class="tag green">Foreign Exchange (EUR/USD, USD/JPY)</span>
                 <span class="tag green">Equity Indices (USTECH100, US30, DXY)</span>
                 <span class="tag green">Commodities (XAU/USD, WTI)</span>
                 <span class="tag green">Germany Energy Markets (Spot Day-Ahead, Intraday, Imbalance, mFRR, aFRR)</span>
             </div>
-<div class="skill-group-header">
-                <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-            
-            <h3>Programming Languages</h3> </div> </div>
+        </div>
+
+        <!-- Programming -->
+        <div class="skill-group">
+            <div class="skill-group-header">
+                <div class="skill-icon"><i class="fas fa-code"></i></div>
+                <h3>Programming Languages</h3>
+            </div>
             <div class="skill-tags">
                 <span class="tag purple">Python (Data Analysis & Quantitative Modeling)</span>
                 <span class="tag purple">MQL5</span>
@@ -506,14 +580,14 @@
                 <span class="tag purple">R (Statistical Computing & Modeling)</span>
                 <span class="tag purple">C (Programming Language)</span>
             </div>
-
         </div>
+
     </div>
 </section>
 
 <!-- CERTIFICATIONS -->
-<section id="cert-gallery">
-    <h2>Certifications</h2>
+<section id="cert-gallery"><h2 class="section-title">Certifications</h2>
+    
     <div class="cert-gallery">
         <div class="cert-card dynamic-hover"><img src="pdfs/cert1.jpeg" alt="Certificate 1"></div>
         <div class="cert-card dynamic-hover"><img src="pdfs/cert2.jpeg" alt="Certificate 2"></div>
@@ -525,7 +599,7 @@
 
 <!-- CONTACT -->
 <section id="contact">
-    <h2>Contact Me</h2>
+    <h2 class="section-title">Contact Me</h2>
     <form action="https://formspree.io/f/mqazdjpr" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>

@@ -12,40 +12,94 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
-}
+/* ── NAVBAR: TRADING / QUANT STYLE ── */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
-nav {
-    background-color: #0e0545;
-    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+
+    padding: 14px 50px;
+
+    background: #0b1020; /* deep trading blue */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
-nav ul {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-}
+/* logo */
+.navbar .logo a {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
 
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: rgb(246, 247, 250);
+    color: #4ea1ff;
     text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+
+    text-transform: uppercase;
 }
 
-nav ul li a:hover {
-    background-color: #042f68;
+/* links container */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+/* links */
+.nav-links li a {
+    position: relative;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    transition: all 0.25s ease;
+}
+
+/* hover glow */
+.nav-links li a:hover {
+    color: #4ea1ff;
+    text-shadow: 0 0 10px rgba(78, 161, 255, 0.6);
+}
+
+/* animated underline */
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0%;
+    height: 2px;
+
+    background: #4ea1ff;
+    box-shadow: 0 0 10px #4ea1ff;
+
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+/* optional active feel */
+.navbar::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    height: 2px;
+    width: 100%;
+
+    background: linear-gradient(90deg, transparent, #4ea1ff, transparent);
+    opacity: 0.6;
 }
 
 /* Header Section */
@@ -150,6 +204,89 @@ header .btn:hover {
 .about-me-container {
     max-width: 800px;
     margin: 0 auto;
+}
+#about {
+    padding: 80px 20px;
+    background: #f7f7fb;
+}
+
+.about-container {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* Top highlight block */
+.about-highlight {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 25px 20px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid rgba(14, 5, 69, 0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.about-highlight h3 {
+    margin: 0;
+    color: #0e0545;
+    font-size: 22px;
+}
+
+.about-subtitle {
+    margin-top: 8px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Grid layout */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+/* Cards */
+.about-card {
+    background: white;
+    border-radius: 12px;
+    padding: 18px 18px;
+    border: 1px solid rgba(14, 5, 69, 0.08);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.about-card h4 {
+    margin: 0 0 8px;
+    color: #0e0545;
+    font-size: 15px;
+}
+
+.about-card p {
+    margin: 0;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Full width card */
+.about-card.full {
+    grid-column: span 2;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-card.full {
+        grid-column: span 1;
+    }
 }
 
 .profile-picture {
@@ -566,4 +703,38 @@ ul li {
     height: 350px;
     object-fit: contain;
     background: #f9f9f9;
+
+
+
+
+}.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+/* ── SECTION TITLE (dynamic underline) ── */
+.section-title {
+    display: inline-block;
+    position: relative;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #02034b;
+    margin-bottom: 25px;
+}
+
+/* animated underline */
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    height: 3px;
+    width: 60%;
+    background: linear-gradient(90deg, #4f46e5, #06b6d4);
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+/* hover effect (optional nice touch) */
+.section-title:hover::after {
+    width: 100%;
 }
