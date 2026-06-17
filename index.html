@@ -40,27 +40,11 @@
         }
     </style>
 </head>
-  <!-- Cert Lightbox -->
-<div class="cert-overlay" id="certOverlay">
-    <button class="close-btn" id="certClose">&times;</button>
-    <img id="certFullImg" src="" alt="Certificate">
-</div>
 <script>
-    const overlay = document.getElementById('certOverlay');
-    const fullImg = document.getElementById('certFullImg');
-    const closeBtn = document.getElementById('certClose');
-
     document.querySelectorAll('.cert-card').forEach(card => {
         card.addEventListener('click', () => {
-            const src = card.querySelector('img').src;
-            fullImg.src = src;
-            overlay.classList.add('active');
+            card.classList.toggle('expanded');
         });
-    });
-
-    closeBtn.addEventListener('click', () => overlay.classList.remove('active'));
-    overlay.addEventListener('click', (e) => {
-        if (e.target === overlay) overlay.classList.remove('active');
     });
 </script>
 <body>
@@ -364,12 +348,10 @@
             <img src="pdfs/cert2.jpeg" alt="Certificate 2">
         </div>
 
-        <div class="cert-card dynamic-hover">
-            <img src="pdfs/cert3.jpeg" alt="Certificate 3">
-        </div>
+     
 
         <div class="cert-card dynamic-hover">
-            <img src="pdfs/cert4.jpge" alt="Certificate 4">
+            <img src="pdfs/cert4.jpeg" alt="Certificate 4">
         </div>
         <div class="cert-card dynamic-hover">
             <img src="pdfs/cert5.jpeg" alt="Certificate 4">
