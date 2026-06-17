@@ -635,3 +635,32 @@ ul li {
     background: none;
     border: none;
 }
+
+
+
+.cert-card {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.cert-card img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    display: block;
+    transition: height 0.4s ease;
+}
+
+.cert-card.expanded {
+    grid-column: span 2;
+}
+
+.cert-card.expanded img {
+    height: 300px;
+    object-fit: contain;
+    background: #f9f9f9;
+}
