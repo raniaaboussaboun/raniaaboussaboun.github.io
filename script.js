@@ -8,7 +8,16 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
         });
     });
 });
+function toggleRole() {
+    const expanded = document.getElementById("roleExpanded");
 
+    if (!expanded) {
+        console.log("roleExpanded not found");
+        return;
+    }
+
+    expanded.classList.toggle("open");
+};
 // Form Submission Handling
 document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -27,6 +36,7 @@ document.querySelector('form').addEventListener('submit', function(e) {
         alert('Please fill out all fields.');
     }
 });
+
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     if (window.scrollY > 50) {
@@ -53,9 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
 const menuToggle = document.querySelector('.menu-toggle');
 const navMenu = document.querySelector('nav ul');
 
-menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
-});
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+    });
+}
 
 
 // Additional JS functionalities can go here

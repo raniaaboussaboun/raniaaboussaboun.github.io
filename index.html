@@ -171,40 +171,65 @@
 <body>
 
 <!-- NAV -->
-<nav class="navbar">
-    <div class="logo">
-        <a href="#">Rania Aboussaboun</a>
-    </div>
-
-    <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+<div class="nav-wrapper">
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">Rania Aboussaboun</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</div>
 
 <!-- HEADER -->
 <header id="home">
     <div class="intro">
-        <h1>Hello, I'm <span>Rania Aboussaboun</span></h1>
-        <p>Quantitative Trading Analyst | Financial Market Analyst | Day and Swing Trader</p>
-        <a href="#contact" class="btn">Contact Me</a>
-    </div>
-    <div class="contact-box">
-        <a href="mailto:aboussabounrania@gmail.com" class="contact-btn dynamic-hover">
-            <img src="images/gmail-mail-icon-for-web-design-free-png.webp">
-        </a>
-        <a href="https://www.linkedin.com/in/raniaaboussaboun/" class="contact-btn dynamic-hover">
-            <img src="images/174857.png">
-        </a>
-        <a href="https://www.kaggle.com/raniaaboussaoun" class="contact-btn dynamic-hover">
-            <img src="images/189_Kaggle_logo_logos-512.webp">
-        </a>
-        <a href="https://github.com/Ranyaaboussaboun" class="contact-btn dynamic-hover">
-            <img src="images/25231.png">
-        </a>
+
+        <h1>
+            Hello, I'm <span>Rania Aboussaboun</span>
+        </h1>
+
+        <!-- ROLE (click to expand) -->
+        <p class="role-preview" onclick="toggleRole()">
+            Quantitative Trading Analyst | Financial Market Analyst |  Swing Trader
+        </p>
+
+        <!-- EXPANDED ROLE DETAILS -->
+        <div class="role-expanded" id="roleExpanded">
+            <ul>
+                <li>Quantitative Trading Analyst</li>
+                <li> Financial Market Analyst </li>
+               
+                <li> Swing Trader (sometimes scalper)</li>
+            </ul>
+        </div>
+
+        <!-- CTA BUTTON -->
+        <div class="cta">
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+
+        <!-- SOCIAL ICONS -->
+        <div class="contact-box">
+            <a href="mailto:aboussabounrania@gmail.com" class="contact-btn">
+                <img src="images/gmail-mail-icon-for-web-design-free-png.webp">
+            </a>
+            <a href="https://www.linkedin.com/in/raniaaboussaboun/" class="contact-btn">
+                <img src="images/174857.png">
+            </a>
+            <a href="https://www.kaggle.com/raniaaboussaoun" class="contact-btn">
+                <img src="images/189_Kaggle_logo_logos-512.webp">
+            </a>
+            <a href="https://github.com/Ranyaaboussaboun" class="contact-btn">
+                <img src="images/25231.png">
+            </a>
+        </div>
+
     </div>
 </header>
 
@@ -598,32 +623,78 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
     <h2 class="section-title">Contact Me</h2>
-    <form action="https://formspree.io/f/mqazdjpr" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-    </form>
-</section>
 
-<!-- FOOTER -->
-<footer>
-    <div class="footer-container">
-        <div class="contact-info">
-            <a href="mailto:aboussabounrania@gmail.com" class="footer-link dynamic-hover">
-                <i class="fas fa-envelope"></i> Email
-            </a>
-            <a href="https://www.linkedin.com/in/raniaaboussaboun/" class="footer-link dynamic-hover">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
+    <div class="contact-wrapper">
+
+        <form action="https://formspree.io/f/mqazdjpr" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+
+        <div class="contact-side">
+            <h3>Let’s connect</h3>
+
+            <p>
+                Actively seeking opportunities in trading and financial market analysis across FX, equities, and futures markets.
+            </p>
+
+            <div class="contact-links">
+                <a href="mailto:aboussabounrania@gmail.com">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+
+                <a href="https://www.linkedin.com/in/raniaaboussaboun/">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
         </div>
-        <div class="contact-details">
-            <p class="dynamic-hover"><i class="fas fa-home"></i> Leipzig, Germany</p>
-            <p class="dynamic-hover"><i class="fas fa-phone"></i> Available on request</p>
-        </div>
+
     </div>
+</section>
+<!-- FOOTER -->
+
+<footer class="site-footer">
+
+    <div class="footer-overlay"></div>
+
+    <div class="footer-box">
+
+      <div class="footer-left footer-motion">
+
+    <p class="footer-title footer-item">
+        Rania Aboussaboun
+    </p>
+
+    <p class="footer-subtitle footer-item">
+        Quantitative Trading • Financial Markets • FX • Equities • Futures
+    </p>
+
+</div>
+        <div class="footer-center">
+            <p class="footer-note">© 2026 All Rights Reserved</p>
+        </div>
+
+        <div class="footer-right">
+            <a href="mailto:aboussabounrania@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/raniaaboussaboun/">
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="#home">
+                ↑ Back to top
+            </a>
+        </div>
+
+    </div>
+
 </footer>
 
 <script>
