@@ -259,45 +259,72 @@ section h2 {
 
 
 
-
-
+/* ── SKILLS SECTION ── */
 .skills-container {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
 }
 
-.skill-category {
-    margin-bottom: 30px;
+.skill-group {
+    margin-bottom: 2rem;
 }
 
-.skill-category h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-/* Add this to make skills display horizontally */
-.skill-category .skill {
-    display: inline-flex;
+.skill-group-header {
+    display: flex;
     align-items: center;
     gap: 10px;
-    background-color: #f4f4f4;
-    padding: 10px;
-    border-radius: 5px;
-    margin: 5px;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #0e0545;
 }
 
-.skill img {
-    width: 30px;
-    height: 30px;
+.skill-group-header .skill-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: #0e0545;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
 }
 
-.skill span {
-    font-size: 16px;
-    font-weight: bold;
+.skill-group-header h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0e0545;
+    margin: 0;
 }
 
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1.5px solid;
+    transition: transform 0.15s ease;
+    cursor: default;
+}
+
+.tag:hover { transform: translateY(-2px); }
+
+.tag.purple { background: #EEEDFE; color: #3C3489; border-color: #AFA9EC; }
+.tag.teal   { background: #E1F5EE; color: #085041; border-color: #5DCAA5; }
+.tag.blue   { background: #E6F1FB; color: #0C447C; border-color: #85B7EB; }
+.tag.coral  { background: #FAECE7; color: #712B13; border-color: #F0997B; }
+.tag.amber  { background: #FAEEDA; color: #633806; border-color: #EF9F27; }
+.tag.green  { background: #EAF3DE; color: #27500A; border-color: #97C459; }
 
 .projects-container {
     display: flex;

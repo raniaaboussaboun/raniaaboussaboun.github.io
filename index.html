@@ -15,28 +15,155 @@
         .dynamic-hover {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
         .dynamic-hover:hover {
             transform: scale(1.05);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
-
         .footer-link.dynamic-hover {
             transition: transform 0.3s ease, color 0.3s ease;
         }
-
         .footer-link.dynamic-hover:hover {
             transform: scale(1.05);
             color: #ffeb3b;
         }
-
         .contact-details p.dynamic-hover {
             transition: transform 0.3s ease, color 0.3s ease;
         }
-
         .contact-details p.dynamic-hover:hover {
             transform: scale(1.05);
             color: #ffeb3b;
+        }
+
+        /* ── CERT GALLERY ── */
+        .cert-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 24px;
+        }
+        .cert-card {
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            background: white;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+        .cert-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+        .cert-card img {
+            width: 100%;
+            height: 110px;
+            object-fit: cover;
+            display: block;
+            transition: height 0.4s ease;
+        }
+        .cert-card.expanded {
+            grid-column: span 2;
+        }
+        .cert-card.expanded img {
+            height: 350px;
+            object-fit: contain;
+            background: #f9f9f9;
+        }
+
+        /* ── EDUCATION SECTION ── */
+        #education {
+            padding: 60px 20px;
+            background-color: #f9f9f9;
+        }
+        .education-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .education-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #ffffff;
+        }
+        .education-details {
+            flex: 1;
+        }
+        .education-details h3 {
+            font-size: 1.1em;
+            color: #02034b;
+            margin: 0 0 4px;
+        }
+        .education-details p {
+            margin: 3px 0;
+            color: #666;
+            font-size: 14px;
+        }
+        .education-details em {
+            color: #999;
+            font-size: 13px;
+        }
+        /* cert thumbnail inside education */
+        .edu-cert-thumb {
+            width: 100px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            flex-shrink: 0;
+        }
+        .edu-cert-thumb:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .edu-cert-thumb.expanded {
+            width: 300px;
+            height: 200px;
+            object-fit: contain;
+            background: #f9f9f9;
+        }
+
+        /* ── EXPANDABLE CERT ON EXPERIENCE ITEMS ── */
+        .cert-toggle-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 10px;
+            padding: 5px 12px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 13px;
+            color: #02034b;
+            transition: background-color 0.2s;
+        }
+        .cert-toggle-btn:hover {
+            background-color: #e0e0e0;
+        }
+        .cert-toggle-btn i {
+            font-size: 13px;
+        }
+        .exp-cert-container {
+            display: none;
+            margin-top: 12px;
+        }
+        .exp-cert-container.open {
+            display: block;
+        }
+        .exp-cert-container img {
+            max-width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            background: #f9f9f9;
         }
     </style>
 </head>
@@ -50,6 +177,7 @@
     </div>
     <ul>
         <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -60,27 +188,19 @@
 <header id="home">
     <div class="intro">
         <h1>Hello, I'm <span>Rania Aboussaboun</span></h1>
-
-        <p>
-            Quantitative Trading Analyst | Financial Market Analyst| Day and Swing Trader
-        </p>
-       
+        <p>Quantitative Trading Analyst | Financial Market Analyst | Day and Swing Trader</p>
         <a href="#contact" class="btn">Contact Me</a>
     </div>
-
     <div class="contact-box">
         <a href="mailto:aboussabounrania@gmail.com" class="contact-btn dynamic-hover">
             <img src="images/gmail-mail-icon-for-web-design-free-png.webp">
         </a>
-
         <a href="https://www.linkedin.com/in/raniaaboussaboun/" class="contact-btn dynamic-hover">
             <img src="images/174857.png">
         </a>
-
         <a href="https://www.kaggle.com/raniaaboussaoun" class="contact-btn dynamic-hover">
             <img src="images/189_Kaggle_logo_logos-512.webp">
         </a>
-
         <a href="https://github.com/Ranyaaboussaboun" class="contact-btn dynamic-hover">
             <img src="images/25231.png">
         </a>
@@ -88,287 +208,295 @@
 </header>
 
 <!-- ABOUT -->
-
 <section id="about">
- 
     <h2>About Me</h2>
-
-
-<p>
-    I am a Quantitative Trading Analyst working in European short term energy markets.
-</p>
-<p>  My role combines fundamental market analysis with short-term trading, where I monitor market developments, assess key drivers, and support trading decisions in a fast-paced shift-based environment</p>
-<p>
-     Outside of my 9–5,I have a strong interest in financial markets, macroeconomics, and quantitative trading. I actively research FX markets, study market behavior, and develop and test my own systematic trading strategies and models.
-</p>
-
-<p>
-    I continuously analyze price action, macros, and market dynamics to deepen my understanding of trading decision-making.
-</p>
-
-<p>
-    I also value discipline and performance outside of finance—I regularly train in the gym and view physical fitness as an important part of maintaining focus, consistency, and a long-term execution mindset.
-</p>
-
-
+    <p>I am a Quantitative Trading Analyst working in European short term energy markets.</p>
+    <p>My role combines fundamental market analysis with short-term trading, where I monitor market developments, assess key drivers, and support trading decisions in a fast-paced shift-based environment.</p>
+    <p>Outside of my 9–5, I have a strong interest in financial markets, macroeconomics, and quantitative trading. I actively research FX markets, study market behavior, and develop and test my own systematic trading strategies and models.</p>
+    <p>I continuously analyze price action, macros, and market dynamics to deepen my understanding of trading decision-making.</p>
+    <p>I also value discipline and performance outside of finance—I regularly train in the gym and view physical fitness as an important part of maintaining focus, consistency, and a long-term execution mindset.</p>
 </section>
 
-<!-- EXPERIENCE -->
+<!-- EDUCATION -->
+<section id="education">
+    <h2>Education</h2>
+    <div class="education-container">
 
-<section id="experience">
-
-    <h2>Professional Experience</h2>
-  
-    <div class="experience-container">
-  
-      <!-- BAYWA BACKUP TRADER -->
-      <div class="experience-item dynamic-hover">
-        <div class="experience-details">
-          <h3>Backup 24/7 short Term Power Trader</h3>
-          <p><strong>BayWa r.e. Energy Trading</strong> - Leipzig, Germany</p>
-          <p><em>Oct 2025 – Present</em></p>
-          <ul>
-            <li>Support 24/7 trading operations across German Intraday, Imbalance, and Capacity markets</li>
-            <li>Monitor and manage power plants portfolios </li>
-            <li>Assist execution decisions under time-critical market conditions</li>
-          </ul>
+        <div class="education-item dynamic-hover">
+            <div class="education-details">
+                <h3>Data Engineering and Decisional Systems</h3>
+                <p><strong>National School of Electronics and Telecommunications of Sfax</strong> —Sfax, Tunisia</p>
+                <p><em>May 2021 – Jun 2024</em></p>
+                
+            </div>
+         
+            <img class="edu-cert-thumb" src="cet2/1.jpeg" alt="Degree Certificate" title="Click to expand">
+            <img class="edu-cert-thumb" src="cet2/5.jpeg" alt="Degree Certificate" title="Click to expand">
         </div>
-      </div>
-  
-      <!-- BAYWA QUANT ANALYST -->
-      <div class="experience-item dynamic-hover">
-        <div class="experience-details">
-          <h3>Quantitative Trading Analyst - Short Term Energy Market </h3>
-          <p><strong>BayWa r.e. Energy Trading</strong> - Leipzig, Germany</p>
-          <p><em>May 2025 – Present</em></p>
-          <ul>
-            <li>Develop strategies for Day-Ahead, Intraday, and Imbalance Markets</li>
-            <li>Analyze price movements and forecast updates to generate trading insights</li>
-          </ul>
-        </div>
-      </div>
-  
-      <!-- CARBON INSIGHTS -->
-      <div class="experience-item dynamic-hover">
-        <div class="experience-details">
-          <h3>Data Science Engineer (Quantitative Trading)</h3>
-          <p><strong>Carbon Insights</strong></p>
-          <p><em>Nov 2024 – Apr 2025</em></p>
-          <ul>
-            <li>Designed and implemented systematic trading strategies for European carbon markets</li>
-            <li>Developed and backtested algorithmic trading strategies using statistical methods</li>
-            <li>Built trading systems based on order flow,  momentum, statistical arbitrage, and technical indicators</li>
-            <li>Developed news-driven short-horizon signal prototypes for predictive price movements</li>
-            <li>Deployed trading bot achieving strong performance in term of pnl and DD</li>
-          </ul>
-        </div>
-      </div>
-  
-      <!-- SFM -->
-      <div class="experience-item dynamic-hover">
-        <div class="experience-details">
-          <h3>Data Science Engineer Intern</h3>
-          <p><strong>SFM Technologies</strong></p>
-          <p><em>Jan 2024 – Nov 2024</em></p>
-          <ul>
-            <li>Developed incremental learning models for energy forecasting and disaggregation</li>
-            <li>Achieved high-performance predictive accuracy (up to 78% on renewable energy models)</li>
-            <li>Compared batch vs online learning approaches in production-like environments</li>
-            <li>Evaluated state-of-the-art machine learning methods for real-world energy systems</li>
-          </ul>
-        </div>
-      </div>
-  
-      <!-- PLANISWARE -->
-      <div class="experience-item dynamic-hover">
-        <div class="experience-details">
-          <h3>NLP & Data Science Intern</h3>
-          <p><strong>PLANISWARE</strong></p>
-          <p><em>Jun 2023 – Aug 2023</em></p>
-          <ul>
-            <li>Developed NLP models (BERT, XLNet) for log analysis and anomaly detection</li>
-            <li>Built active learning pipelines for automated error detection in system logs</li>
-            <li>Improved labeling efficiency and model robustness using semi-supervised methods</li>
-          </ul>
-        </div>
-      </div>
-  
-      <!-- AI RESEARCH -->
-      <div class="experience-item dynamic-hover">
-        <div class="experience-details">
-          <h3>AI Research Intern</h3>
-          <p><strong>Digital Research Center of Sfax</strong></p>
-          <p><em>Jan 2023 – May 2023</em></p>
-          <ul>
-            <li>Researched GAN and Pix2Pix models for image generation from thermal drone imagery</li>
-            <li>Worked on computer vision pipelines for environmental and aerial data analysis</li>
-          </ul>
-        </div>
-      </div>
-  
-      <!-- PIXEMANTIC -->
-      <div class="experience-item dynamic-hover">
-        <div class="experience-details">
-          <h3>Data Science Intern</h3>
-          <p><strong>Pixemantic</strong></p>
-          <p><em>Aug 2022 – Jun 2022</em></p>
-          <ul>
-            <li>Collected and processed medical datasets for AI-based consultation systems</li>
-            <li>Developed a medical chatbot for disease information retrieval and assistance</li>
-          </ul>
-        </div>
-      </div>
-  
-      <!-- BNA -->
-      <div class="experience-item dynamic-hover">
-        <div class="experience-details">
-          <h3>Data Science Intern</h3>
-          <p><strong>Banque Nationale Agricole (BNA)</strong></p>
-          <p><em>Jun 2022 – Aug 2022</em></p>
-          <ul>
-            <li>Cleaned and structured financial datasets using SQL</li>
-            <li>Developed Power BI dashboards for agricultural finance reporting</li>
-          </ul>
-        </div>
-      </div>
-  
-    </div>
-  </section>
-<section id="skills">
-    <h2>Skills</h2>
-  
-    <div class="skills-container">
-  
-      <h3>Market & Macro Analysis</h3>
-      <div class="skill-category">
-        <div class="skill dynamic-hover"><span>Macroeconomic & Fundamental Analysis</span></div>
-        <div class="skill dynamic-hover"><span>Central Bank Policy & Interest Rate Interpretation</span></div>
-        <div class="skill dynamic-hover"><span>Economic Calendar & News Impact Analysis </span></div>
-        <div class="skill dynamic-hover"><span>Cross-Asset Correlation Analysis (FX, Equities, Commodities)</span></div>
-        <div class="skill dynamic-hover"><span>Liquidity Mapping & Order Flow Interpretation</span></div>
-        <div class="skill dynamic-hover"><span>Technical Analysis & Multi-Timeframe Structure</span></div>
-      </div>
-  
-     
-
-      <h3>Mathematics & Quantitative Methods</h3>
-      <div class="skill-category">
-        <div class="skill dynamic-hover"><span>Probability Theory & Stochastic Processes</span></div>
-        <div class="skill dynamic-hover"><span>Markov Chains for State-Based Market Modeling</span></div>
-        <div class="skill dynamic-hover"><span>Monte Carlo Simulations for Risk & Scenario Analysis</span></div>
-        <div class="skill dynamic-hover"><span>Statistical Inference & Hypothesis Testing</span></div>
-        <div class="skill dynamic-hover"><span>Time Series Analysis & Volatility Modeling</span></div>
-        <div class="skill dynamic-hover"><span>Regression Analysis (Linear & Multivariate)</span></div>
-      </div>
-      
-
-      <h3>Machine Learning </h3>
-      <div class="skill-category">
-        <div class="skill dynamic-hover"><span>Neural Networks (NN)</span></div>
-        <div class="skill dynamic-hover"><span>XGBoost & LightGBM (Gradient Boosting Models)</span></div>
-        <div class="skill dynamic-hover"><span>Feature Engineering for Financial Time Series</span></div>
-        <div class="skill dynamic-hover"><span>Bayesian Statistics & Probabilistic Models</span></div>
-      </div>
-  
-       
-      <h3>Trading & Execution</h3>
-      <div class="skill-category">
-        <div class="skill dynamic-hover"><span>Price Action & Market Structure Trading</span></div>
-        <div class="skill dynamic-hover"><span>Order Book (DOM) & Liquidity Flow Analysis</span></div>
-        <div class="skill dynamic-hover"><span>Intraday, Swing & Session-Based Trading (London / NY)</span></div>
-        <div class="skill dynamic-hover"><span>News-Driven Volatility Trading</span></div>
-        <div class="skill dynamic-hover"><span>Algorithmic Trading & Strategy Development (MQL5)</span></div>
-        <div class="skill dynamic-hover"><span>Backtesting Strategies & Optimization</span></div>
-        <div class="skill dynamic-hover"><span>High-Frequency Trading (HFT) Concepts</span></div>
-        <div class="skill dynamic-hover"><span>Mean Reversion, Momentum & Trend-Following Strategies</span></div>
-        <div class="skill dynamic-hover"><span>Technical Indicators (RSI, MACD, Bollinger Bands)</span></div>
-      </div>
-  
-      <h3>Market Microstructure & Execution Quality</h3>
-      <div class="skill-category">
-        <div class="skill dynamic-hover"><span>Order Flow Analysis (Liquidity, Volume Imbalance, Heatmaps)</span></div>
-        <div class="skill dynamic-hover"><span>DOM analysis</span></div>
-        <div class="skill dynamic-hover"><span>Slippage Modeling</span></div>
-        <div class="skill dynamic-hover"><span>Market Impact & Liquidity Dynamics</span></div>
-        <div class="skill dynamic-hover"><span>Volatility Modeling </span></div>
-      </div>
-
-      <h3>Risk & Portfolio Management</h3>
-      <div class="skill-category">
-        <div class="skill dynamic-hover"><span>Value at Risk (VaR)</span></div>
-        <div class="skill dynamic-hover"><span>Monte Carlo Risk Simulations</span></div>
-        <div class="skill dynamic-hover"><span>Portfolio Optimization</span></div>
-        <div class="skill dynamic-hover"><span>Hedging Strategies</span></div>
-        <div class="skill dynamic-hover"><span>Risk-Adjusted Performance Metrics (Sharpe / Sortino Ratio)</span></div>
-        <div class="skill dynamic-hover"><span>Position Sizing & Capital Preservation</span></div>
-      </div>
-  
-      <h3>Markets & Instruments</h3>
-      <div class="skill-category">
-        <div class="skill dynamic-hover"><span>Foreign Exchange (EUR/USD, USD/JPY)</span></div>
-        <div class="skill dynamic-hover"><span>Equity Indices (ustech100,US30,DX)</span></div>
-        <div class="skill dynamic-hover"><span>Commodities ( XAU/USD, WTI)</span></div>
-        <div class="skill dynamic-hover"><span>Germany energy Markets (Spot Day-Ahead, Intraday, Imbalance, mFRR, aFRR)</span></div>
-
-      </div>
-  
-      <h3>Programming Languages </h3>
-      <div class="skill-category">
-        <div class="skill dynamic-hover"><span>Python (Data Analysis & Quantitative Modeling)</span></div>
-        <div class="skill dynamic-hover"><span>MQL5</span></div>
-        <div class="skill dynamic-hover"><span>SQL (Market & Financial Data Querying)</span></div>
-        <div class="skill dynamic-hover"><span>R (Statistical Computing & Modeling)</span></div>
-        <div class="skill dynamic-hover"><span>c (Programming Language) </span></div>
 
        
-      </div>
-  
-    </div>
-  </section>
-
-
-  <!-- CERTIFICATIONS -->
-<section id="cert-gallery">
-    <h2>Certifications</h2>
-
-    <div class="cert-gallery">
-
-        <div class="cert-card dynamic-hover">
-            <img src="pdfs/cert1.jpeg" alt="Certificate 1">
+        <div class="education-item dynamic-hover">
+            <div class="education-details">
+                <h3>Mathematics and Physics Pre-Engineering Studies</h3>
+                <p><strong>Preparatory Institute for Engineering Nabeul</strong> — Nabeul, Tunisia</p>
+                <p><em>sep 2019 – Jun 2021</em></p>
+               
+            </div>
             
         </div>
 
-        <div class="cert-card dynamic-hover">
-            <img src="pdfs/cert2.jpeg" alt="Certificate 2">
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+    <h2>Professional Experience</h2>
+    <div class="experience-container">
+
+        <!-- BAYWA BACKUP TRADER — no cert -->
+        <div class="experience-item dynamic-hover">
+            <div class="experience-details">
+                <h3>Backup 24/7 Short Term Power Trader</h3>
+                <p><strong>BayWa r.e. Energy Trading</strong> - Leipzig, Germany</p>
+                <p><em>Oct 2025 – Present</em></p>
+                <ul>
+                    <li>Support 24/7 trading operations across German Intraday, Imbalance, and Capacity markets</li>
+                    <li>Monitor and manage power plants portfolios</li>
+                    <li>Assist execution decisions under time-critical market conditions</li>
+                </ul>
+            </div>
         </div>
 
-     
+        <!-- BAYWA QUANT ANALYST — no cert -->
+        <div class="experience-item dynamic-hover">
+            <div class="experience-details">
+                <h3>Quantitative Trading Analyst - Short Term Energy Market</h3>
+                <p><strong>BayWa r.e. Energy Trading</strong> - Leipzig, Germany</p>
+                <p><em>May 2025 – Present</em></p>
+                <ul>
+                    <li>Develop strategies for Day-Ahead, Intraday, and Imbalance Markets</li>
+                    <li>Analyze price movements and forecast updates to generate trading insights</li>
+                </ul>
+            </div>
+        </div>
 
-        <div class="cert-card dynamic-hover">
-            <img src="pdfs/cert4.jpeg" alt="Certificate 4">
-        </div>
-        <div class="cert-card dynamic-hover">
-            <img src="pdfs/cert5.jpeg" alt="Certificate 4">
-        </div>
-    <div class="cert-card dynamic-hover">
-            <img src="pdfs/cert6.jpg" alt="Certificate 4">
+        <!-- CARBON INSIGHTS — with cert -->
+        <div class="experience-item dynamic-hover">
+            <div class="experience-details">
+                <h3>Data Science Engineer (Quantitative Trading)</h3>
+                <p><strong>Carbon Insights</strong></p>
+                <p><em>Nov 2024 – Apr 2025</em></p>
+                <ul>
+                    <li>Designed and implemented systematic trading strategies for European carbon markets</li>
+                    <li>Developed and backtested algorithmic trading strategies using statistical methods</li>
+                    <li>Built trading systems based on order flow, momentum, statistical arbitrage, and technical indicators</li>
+                    <li>Developed news-driven short-horizon signal prototypes for predictive price movements</li>
+                    <li>Deployed trading bot achieving strong performance in term of pnl and DD</li>
+                </ul>
+                <button class="cert-toggle-btn" onclick="toggleExpCert(this)">
+                    <i class="fas fa-certificate"></i> View Certificate
+                </button>
+                
+            </div>
         </div>
 
+        <!-- SFM — with cert -->
+        <div class="experience-item dynamic-hover">
+            <div class="experience-details">
+                <h3>Data Science Engineer Intern</h3>
+                <p><strong>SFM Technologies</strong></p>
+                <p><em>Jan 2024 – Nov 2024</em></p>
+                <ul>
+                    <li>Developed incremental learning models for energy forecasting and disaggregation</li>
+                    <li>Achieved high-performance predictive accuracy (up to 78% on renewable energy models)</li>
+                    <li>Compared batch vs online learning approaches in production-like environments</li>
+                    <li>Evaluated state-of-the-art machine learning methods for real-world energy systems</li>
+                </ul>
+                <button class="cert-toggle-btn" onclick="toggleExpCert(this)">
+                    <i class="fas fa-certificate"></i> View Certificate
+                </button>
+                <div class="exp-cert-container">
+                    <img src="cet2/2.jpeg" alt="SFM Technologies Certificate">
+                </div>
+            </div>
+        </div>
+
+        <!-- PLANISWARE — with cert -->
+        <div class="experience-item dynamic-hover">
+            <div class="experience-details">
+                <h3>NLP & Data Science Intern</h3>
+                <p><strong>PLANISWARE</strong></p>
+                <p><em>Jun 2023 – Aug 2023</em></p>
+                <ul>
+                    <li>Developed NLP models (BERT, XLNet) for log analysis and anomaly detection</li>
+                    <li>Built active learning pipelines for automated error detection in system logs</li>
+                    <li>Improved labeling efficiency and model robustness using semi-supervised methods</li>
+                </ul>
+                <button class="cert-toggle-btn" onclick="toggleExpCert(this)">
+                    <i class="fas fa-certificate"></i> View Certificate
+                </button>
+                <div class="exp-cert-container">
+                    <img src="cet2/3.jpeg" alt="Planisware Certificate">
+                </div>
+            </div>
+        </div>
+
+        <!-- AI RESEARCH — with cert -->
+        <div class="experience-item dynamic-hover">
+            <div class="experience-details">
+                <h3>AI Research Intern</h3>
+                <p><strong>Digital Research Center of Sfax</strong></p>
+                <p><em>Jan 2023 – May 2023</em></p>
+                <ul>
+                    <li>Researched GAN and Pix2Pix models for image generation from thermal drone imagery</li>
+                    <li>Worked on computer vision pipelines for environmental and aerial data analysis</li>
+                </ul>
+                
+                </div>
+            </div>
+        </div>
+
+        <!-- PIXEMANTIC — with cert -->
+        <div class="experience-item dynamic-hover">
+            <div class="experience-details">
+                <h3>Data Science Intern</h3>
+                <p><strong>Pixemantic</strong></p>
+                <p><em>Aug 2022 – Jun 2022</em></p>
+                <ul>
+                    <li>Collected and processed medical datasets for AI-based consultation systems</li>
+                    <li>Developed a medical chatbot for disease information retrieval and assistance</li>
+                </ul>
+                <button class="cert-toggle-btn" onclick="toggleExpCert(this)">
+                    <i class="fas fa-certificate"></i> View Certificate
+                </button>
+                <div class="exp-cert-container">
+                    <img src="cet2/2.jpeg" alt="Pixemantic Certificate">
+                </div>
+            </div>
+        </div>
+
+        <!-- BNA — with cert -->
+        <div class="experience-item dynamic-hover">
+            <div class="experience-details">
+                <h3>Data Science Intern</h3>
+                <p><strong>Banque Nationale Agricole (BNA)</strong></p>
+                <p><em>Jun 2022 – Aug 2022</em></p>
+                <ul>
+                    <li>Cleaned and structured financial datasets using SQL</li>
+                    <li>Developed Power BI dashboards for agricultural finance reporting</li>
+                </ul>
+                <button class="cert-toggle-btn" onclick="toggleExpCert(this)">
+                    <i class="fas fa-certificate"></i> View Certificate
+                </button>
+                <div class="exp-cert-container">
+                    <img src="pcet2/11.jpeg" alt="BNA Certificate">
+                </div>
+            </div>
+        </div>
 
     </div>
 </section>
-  
-    
 
-  
-   
-  
+<!-- SKILLS -->
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
 
+        <h3>Market & Macro Analysis</h3>
+        <div class="skill-category">
+            <div class="skill dynamic-hover"><span>Macroeconomic & Fundamental Analysis</span></div>
+            <div class="skill dynamic-hover"><span>Central Bank Policy & Interest Rate Interpretation</span></div>
+            <div class="skill dynamic-hover"><span>Economic Calendar & News Impact Analysis</span></div>
+            <div class="skill dynamic-hover"><span>Cross-Asset Correlation Analysis (FX, Equities, Commodities)</span></div>
+            <div class="skill dynamic-hover"><span>Liquidity Mapping & Order Flow Interpretation</span></div>
+            <div class="skill dynamic-hover"><span>Technical Analysis & Multi-Timeframe Structure</span></div>
+        </div>
+
+        <h3>Mathematics & Quantitative Methods</h3>
+        <div class="skill-category">
+            <div class="skill dynamic-hover"><span>Probability Theory & Stochastic Processes</span></div>
+            <div class="skill dynamic-hover"><span>Markov Chains for State-Based Market Modeling</span></div>
+            <div class="skill dynamic-hover"><span>Monte Carlo Simulations for Risk & Scenario Analysis</span></div>
+            <div class="skill dynamic-hover"><span>Statistical Inference & Hypothesis Testing</span></div>
+            <div class="skill dynamic-hover"><span>Time Series Analysis & Volatility Modeling</span></div>
+            <div class="skill dynamic-hover"><span>Regression Analysis (Linear & Multivariate)</span></div>
+        </div>
+
+        <h3>Machine Learning</h3>
+        <div class="skill-category">
+            <div class="skill dynamic-hover"><span>Neural Networks (NN)</span></div>
+            <div class="skill dynamic-hover"><span>XGBoost & LightGBM (Gradient Boosting Models)</span></div>
+            <div class="skill dynamic-hover"><span>Feature Engineering for Financial Time Series</span></div>
+            <div class="skill dynamic-hover"><span>Bayesian Statistics & Probabilistic Models</span></div>
+        </div>
+
+        <h3>Trading & Execution</h3>
+        <div class="skill-category">
+            <div class="skill dynamic-hover"><span>Price Action & Market Structure Trading</span></div>
+            <div class="skill dynamic-hover"><span>Order Book (DOM) & Liquidity Flow Analysis</span></div>
+            <div class="skill dynamic-hover"><span>Intraday, Swing & Session-Based Trading (London / NY)</span></div>
+            <div class="skill dynamic-hover"><span>News-Driven Volatility Trading</span></div>
+            <div class="skill dynamic-hover"><span>Algorithmic Trading & Strategy Development (MQL5)</span></div>
+            <div class="skill dynamic-hover"><span>Backtesting Strategies & Optimization</span></div>
+            <div class="skill dynamic-hover"><span>High-Frequency Trading (HFT) Concepts</span></div>
+            <div class="skill dynamic-hover"><span>Mean Reversion, Momentum & Trend-Following Strategies</span></div>
+            <div class="skill dynamic-hover"><span>Technical Indicators (RSI, MACD, Bollinger Bands)</span></div>
+        </div>
+
+        <h3>Market Microstructure & Execution Quality</h3>
+        <div class="skill-category">
+            <div class="skill dynamic-hover"><span>Order Flow Analysis (Liquidity, Volume Imbalance, Heatmaps)</span></div>
+            <div class="skill dynamic-hover"><span>DOM Analysis</span></div>
+            <div class="skill dynamic-hover"><span>Slippage Modeling</span></div>
+            <div class="skill dynamic-hover"><span>Market Impact & Liquidity Dynamics</span></div>
+            <div class="skill dynamic-hover"><span>Volatility Modeling</span></div>
+        </div>
+
+        <h3>Risk & Portfolio Management</h3>
+        <div class="skill-category">
+            <div class="skill dynamic-hover"><span>Value at Risk (VaR)</span></div>
+            <div class="skill dynamic-hover"><span>Monte Carlo Risk Simulations</span></div>
+            <div class="skill dynamic-hover"><span>Portfolio Optimization</span></div>
+            <div class="skill dynamic-hover"><span>Hedging Strategies</span></div>
+            <div class="skill dynamic-hover"><span>Risk-Adjusted Performance Metrics (Sharpe / Sortino Ratio)</span></div>
+            <div class="skill dynamic-hover"><span>Position Sizing & Capital Preservation</span></div>
+        </div>
+
+        <h3>Markets & Instruments</h3>
+        <div class="skill-category">
+            <div class="skill dynamic-hover"><span>Foreign Exchange (EUR/USD, USD/JPY)</span></div>
+            <div class="skill dynamic-hover"><span>Equity Indices (ustech100, US30, DX)</span></div>
+            <div class="skill dynamic-hover"><span>Commodities (XAU/USD, WTI)</span></div>
+            <div class="skill dynamic-hover"><span>Germany Energy Markets (Spot Day-Ahead, Intraday, Imbalance, mFRR, aFRR)</span></div>
+        </div>
+
+        <h3>Programming Languages</h3>
+        <div class="skill-category">
+            <div class="skill dynamic-hover"><span>Python (Data Analysis & Quantitative Modeling)</span></div>
+            <div class="skill dynamic-hover"><span>MQL5</span></div>
+            <div class="skill dynamic-hover"><span>SQL (Market & Financial Data Querying)</span></div>
+            <div class="skill dynamic-hover"><span>R (Statistical Computing & Modeling)</span></div>
+            <div class="skill dynamic-hover"><span>C (Programming Language)</span></div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="cert-gallery">
+    <h2>Certifications</h2>
+    <div class="cert-gallery">
+        <div class="cert-card dynamic-hover"><img src="pdfs/cert1.jpeg" alt="Certificate 1"></div>
+        <div class="cert-card dynamic-hover"><img src="pdfs/cert2.jpeg" alt="Certificate 2"></div>
+        <div class="cert-card dynamic-hover"><img src="pdfs/cert4.jpeg" alt="Certificate 4"></div>
+        <div class="cert-card dynamic-hover"><img src="pdfs/cert5.jpeg" alt="Certificate 5"></div>
+        <div class="cert-card dynamic-hover"><img src="pdfs/cert6.jpg"  alt="Certificate 6"></div>
+    </div>
+</section>
 
 <!-- CONTACT -->
 <section id="contact">
     <h2>Contact Me</h2>
-
     <form action="https://formspree.io/f/mqazdjpr" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
@@ -380,30 +508,45 @@
 <!-- FOOTER -->
 <footer>
     <div class="footer-container">
-
         <div class="contact-info">
             <a href="mailto:aboussabounrania@gmail.com" class="footer-link dynamic-hover">
                 <i class="fas fa-envelope"></i> Email
             </a>
-
             <a href="https://www.linkedin.com/in/raniaaboussaboun/" class="footer-link dynamic-hover">
                 <i class="fab fa-linkedin"></i> LinkedIn
             </a>
         </div>
-
         <div class="contact-details">
             <p class="dynamic-hover"><i class="fas fa-home"></i> Leipzig, Germany</p>
             <p class="dynamic-hover"><i class="fas fa-phone"></i> Available on request</p>
         </div>
-
     </div>
 </footer>
+
 <script>
+    /* ── Cert gallery: click to expand in grid ── */
     document.querySelectorAll('.cert-card').forEach(card => {
         card.addEventListener('click', () => {
             card.classList.toggle('expanded');
         });
     });
+
+    /* ── Education certs: click thumbnail to expand ── */
+    document.querySelectorAll('.edu-cert-thumb').forEach(img => {
+        img.addEventListener('click', () => {
+            img.classList.toggle('expanded');
+        });
+    });
+
+    /* ── Experience: toggle cert panel ── */
+    function toggleExpCert(btn) {
+        const container = btn.nextElementSibling;
+        const isOpen = container.classList.toggle('open');
+        btn.innerHTML = isOpen
+            ? '<i class="fas fa-times"></i> Hide Certificate'
+            : '<i class="fas fa-certificate"></i> View Certificate';
+    }
 </script>
+
 </body>
 </html>
